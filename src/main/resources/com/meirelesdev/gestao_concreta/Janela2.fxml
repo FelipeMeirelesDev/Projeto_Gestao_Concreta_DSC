@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1280.0"
+            xmlns="http://javafx.com/javafx/26"
+            xmlns:fx="http://javafx.com/fxml/1">
+
+    <!-- Menu lateral -->
+    <Pane layoutX="0.0" layoutY="0.0"
+          prefHeight="720.0" prefWidth="250.0"
+          style="-fx-background-color: #2C3E50;">
+
+        <Label layoutX="45.0" layoutY="25.0"
+               text="ConstruControl"
+               style="-fx-text-fill: white; -fx-font-size: 24px; -fx-font-weight: bold;" />
+
+        <Button layoutX="20.0" layoutY="100.0"
+                prefWidth="210.0"
+                text="🏠 Dashboard" />
+
+        <Button layoutX="20.0" layoutY="150.0"
+                prefWidth="210.0"
+                text="📦 Produtos" />
+
+        <Button layoutX="20.0" layoutY="200.0"
+                prefWidth="210.0"
+                text="📊 Estoque" />
+
+        <Button layoutX="20.0" layoutY="250.0"
+                prefWidth="210.0"
+                text="💰 Vendas" />
+
+        <Button layoutX="20.0" layoutY="300.0"
+                prefWidth="210.0"
+                text="👥 Clientes" />
+
+        <Button layoutX="20.0" layoutY="350.0"
+                prefWidth="210.0"
+                text="🚚 Fornecedores" />
+
+        <Button layoutX="20.0" layoutY="400.0"
+                prefWidth="210.0"
+                text="📋 Relatórios" />
+
+    </Pane>
+
+    <!-- Cabeçalho -->
+    <Pane layoutX="250.0" layoutY="0.0"
+          prefHeight="80.0" prefWidth="1030.0"
+          style="-fx-background-color: #ECF0F1;">
+
+        <Label layoutX="30.0" layoutY="25.0"
+               text="Dashboard"
+               style="-fx-font-size: 26px; -fx-font-weight: bold;" />
+
+    </Pane>
+
+    <!-- Cards de resumo -->
+    <Pane layoutX="290.0" layoutY="110.0"
+          prefHeight="120.0" prefWidth="220.0"
+          style="-fx-background-color: #3498DB; -fx-background-radius: 10;">
+
+        <Label layoutX="20.0" layoutY="20.0"
+               text="Produtos"
+               style="-fx-text-fill: white; -fx-font-size: 18px;" />
+
+        <Label layoutX="20.0" layoutY="60.0"
+               text="1.250"
+               style="-fx-text-fill: white; -fx-font-size: 32px; -fx-font-weight: bold;" />
+
+    </Pane>
+
+    <Pane layoutX="550.0" layoutY="110.0"
+          prefHeight="120.0" prefWidth="220.0"
+          style="-fx-background-color: #27AE60; -fx-background-radius: 10;">
+
+        <Label layoutX="20.0" layoutY="20.0"
+               text="Clientes"
+               style="-fx-text-fill: white; -fx-font-size: 18px;" />
+
+        <Label layoutX="20.0" layoutY="60.0"
+               text="580"
+               style="-fx-text-fill: white; -fx-font-size: 32px; -fx-font-weight: bold;" />
+
+    </Pane>
+
+    <Pane layoutX="810.0" layoutY="110.0"
+          prefHeight="120.0" prefWidth="220.0"
+          style="-fx-background-color: #F39C12; -fx-background-radius: 10;">
+
+        <Label layoutX="20.0" layoutY="20.0"
+               text="Vendas Hoje"
+               style="-fx-text-fill: white; -fx-font-size: 18px;" />
+
+        <Label layoutX="20.0" layoutY="60.0"
+               text="R$ 8.540"
+               style="-fx-text-fill: white; -fx-font-size: 28px; -fx-font-weight: bold;" />
+
+    </Pane>
+
+    <Pane layoutX="1070.0" layoutY="110.0"
+          prefHeight="120.0" prefWidth="170.0"
+          style="-fx-background-color: #E74C3C; -fx-background-radius: 10;">
+
+        <Label layoutX="15.0" layoutY="20.0"
+               text="Estoque Baixo"
+               style="-fx-text-fill: white; -fx-font-size: 16px;" />
+
+        <Label layoutX="15.0" layoutY="60.0"
+               text="24"
+               style="-fx-text-fill: white; -fx-font-size: 32px; -fx-font-weight: bold;" />
+
+    </Pane>
+
+    <!-- Tabela -->
+    <Label layoutX="290.0" layoutY="270.0"
+           text="Produtos com Estoque Baixo"
+           style="-fx-font-size: 18px; -fx-font-weight: bold;" />
+
+    <TableView layoutX="290.0" layoutY="310.0"
+               prefHeight="330.0" prefWidth="950.0">
+
+        <columns>
+            <TableColumn prefWidth="120.0" text="Código" />
+            <TableColumn prefWidth="350.0" text="Produto" />
+            <TableColumn prefWidth="150.0" text="Categoria" />
+            <TableColumn prefWidth="120.0" text="Quantidade" />
+            <TableColumn prefWidth="120.0" text="Mínimo" />
+            <TableColumn prefWidth="90.0" text="Status" />
+        </columns>
+
+    </TableView>
+
+</AnchorPane>
