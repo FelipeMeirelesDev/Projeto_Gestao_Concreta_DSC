@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane prefHeight="720.0"
+            prefWidth="1280.0"
+            xmlns="http://javafx.com/javafx/26"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.meirelesdev.gestao_concreta.controller.TelaPrincipalController">
+
+    <!-- ============================================== -->
+    <!-- SIDEBAR -->
+    <!-- ============================================== -->
+
+    <Pane layoutX="0"
+          layoutY="0"
+          prefWidth="250"
+          prefHeight="720"
+          style="-fx-background-color:#5E5473;">
+
+        <Label layoutX="25"
+               layoutY="30"
+               text="Gestão Concreta"
+               style="-fx-text-fill:white;
+                      -fx-font-size:24px;
+                      -fx-font-weight:bold;"/>
+
+        <Label layoutX="27"
+               layoutY="63"
+               text="Sistema de Gestão"
+               style="-fx-text-fill:#D9D9D9;
+                      -fx-font-size:12px;"/>
+
+        <!-- MENU -->
+
+        <Button fx:id="btnInicio"
+                layoutX="20"
+                layoutY="120"
+                prefWidth="210"
+                prefHeight="42"
+                text="🏠 Início"
+                onAction="#abrirInicio"/>
+
+        <Button fx:id="btnProdutos"
+                layoutX="20"
+                layoutY="175"
+                prefWidth="210"
+                prefHeight="42"
+                text="📦 Produtos"
+                onAction="#abrirProdutos"/>
+
+        <Button fx:id="btnVendas"
+                layoutX="20"
+                layoutY="230"
+                prefWidth="210"
+                prefHeight="42"
+                text="💰 Vendas"
+                onAction="#abrirVendas"/>
+
+        <Button fx:id="btnRelatorios"
+                layoutX="20"
+                layoutY="285"
+                prefWidth="210"
+                prefHeight="42"
+                text="📊 Relatórios"
+                onAction="#abrirRelatorios"/>
+
+        <Button fx:id="btnConfiguracoes"
+                layoutX="20"
+                layoutY="340"
+                prefWidth="210"
+                prefHeight="42"
+                text="⚙ Configurações"
+                onAction="#abrirConfiguracoes"/>
+
+        <!-- USUÁRIO -->
+
+        <Label layoutX="20"
+               layoutY="585"
+               text="Usuário"
+               style="-fx-text-fill:white;
+                      -fx-font-weight:bold;"/>
+
+        <Label fx:id="lblUsuario"
+               layoutX="20"
+               layoutY="607"
+               text="Administrador"
+               style="-fx-text-fill:white;"/>
+
+        <Label layoutX="20"
+               layoutY="632"
+               text="Perfil"
+               style="-fx-text-fill:white;
+                      -fx-font-weight:bold;"/>
+
+        <Label fx:id="lblPerfil"
+               layoutX="20"
+               layoutY="654"
+               text="Administrador"
+               style="-fx-text-fill:white;"/>
+
+        <!-- SAIR -->
+
+        <Button fx:id="btnSair"
+                layoutX="20"
+                layoutY="675"
+                prefWidth="210"
+                prefHeight="30"
+                text="🚪 Sair"
+                onAction="#sairSistema"
+                style="-fx-background-color:#FF0048;
+                       -fx-text-fill:white;
+                       -fx-font-weight:bold;"/>
+
+    </Pane>
+
+    <!-- ============================================== -->
+    <!-- ÁREA DE CONTEÚDO -->
+    <!-- ============================================== -->
+
+    <AnchorPane fx:id="painelConteudo"
+                layoutX="250"
+                layoutY="0"
+                prefWidth="1030"
+                prefHeight="720"
+                style="-fx-background-color:#F7F7F7;"/>
+
+</AnchorPane>
