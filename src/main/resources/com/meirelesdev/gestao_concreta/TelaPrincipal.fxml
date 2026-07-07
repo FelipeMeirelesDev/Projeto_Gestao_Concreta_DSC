@@ -1,131 +1,127 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.Priority?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
 
-<AnchorPane prefHeight="720.0"
-            prefWidth="1280.0"
-            xmlns="http://javafx.com/javafx/26"
+<AnchorPane prefWidth="1280"
+            prefHeight="720"
+            xmlns="http://javafx.com/javafx/17"
             xmlns:fx="http://javafx.com/fxml/1"
             fx:controller="com.meirelesdev.gestao_concreta.controller.TelaPrincipalController">
 
-    <!-- ============================================== -->
+    <!-- ================================================= -->
     <!-- SIDEBAR -->
-    <!-- ============================================== -->
+    <!-- ================================================= -->
 
-    <Pane layoutX="0"
-          layoutY="0"
-          prefWidth="250"
-          prefHeight="720"
-          style="-fx-background-color:#5E5473;">
+    <VBox prefWidth="250"
+          minWidth="250"
+          maxWidth="250"
+          spacing="10"
+          style="-fx-background-color:#5E5473;"
 
-        <Label layoutX="25"
-               layoutY="30"
-               text="Gestão Concreta"
+          AnchorPane.leftAnchor="0.0"
+          AnchorPane.topAnchor="0.0"
+          AnchorPane.bottomAnchor="0.0">
+
+        <padding>
+            <Insets top="25" right="20" bottom="20" left="20"/>
+        </padding>
+
+        <!-- Logo -->
+
+        <Label text="Gestão Concreta"
                style="-fx-text-fill:white;
                       -fx-font-size:24px;
                       -fx-font-weight:bold;"/>
 
-        <Label layoutX="27"
-               layoutY="63"
-               text="Sistema de Gestão"
+        <Label text="Sistema de Gestão"
                style="-fx-text-fill:#D9D9D9;
                       -fx-font-size:12px;"/>
+
+        <Region prefHeight="25"/>
 
         <!-- MENU -->
 
         <Button fx:id="btnInicio"
-                layoutX="20"
-                layoutY="120"
-                prefWidth="210"
                 prefHeight="42"
+                maxWidth="1.7976931348623157E308"
                 text="🏠 Início"
                 onAction="#abrirInicio"/>
 
         <Button fx:id="btnProdutos"
-                layoutX="20"
-                layoutY="175"
-                prefWidth="210"
                 prefHeight="42"
+                maxWidth="1.7976931348623157E308"
                 text="📦 Produtos"
                 onAction="#abrirProdutos"/>
 
         <Button fx:id="btnVendas"
-                layoutX="20"
-                layoutY="230"
-                prefWidth="210"
                 prefHeight="42"
+                maxWidth="1.7976931348623157E308"
                 text="💰 Vendas"
                 onAction="#abrirVendas"/>
 
         <Button fx:id="btnRelatorios"
-                layoutX="20"
-                layoutY="285"
-                prefWidth="210"
                 prefHeight="42"
+                maxWidth="1.7976931348623157E308"
                 text="📊 Relatórios"
                 onAction="#abrirRelatorios"/>
 
         <Button fx:id="btnConfiguracoes"
-                layoutX="20"
-                layoutY="340"
-                prefWidth="210"
                 prefHeight="42"
+                maxWidth="1.7976931348623157E308"
                 text="⚙ Configurações"
                 onAction="#abrirConfiguracoes"/>
 
-        <!-- USUÁRIO -->
+        <!-- Empurra o usuário para baixo -->
 
-        <Label layoutX="20"
-               layoutY="585"
-               text="Usuário"
+        <Pane VBox.vgrow="ALWAYS"/>
+
+        <!-- Usuário -->
+
+        <Label text="Usuário"
                style="-fx-text-fill:white;
                       -fx-font-weight:bold;"/>
 
         <Label fx:id="lblUsuario"
-               layoutX="20"
-               layoutY="607"
                text="Administrador"
                style="-fx-text-fill:white;"/>
 
-        <Label layoutX="20"
-               layoutY="632"
-               text="Perfil"
+        <Label text="Perfil"
                style="-fx-text-fill:white;
                       -fx-font-weight:bold;"/>
 
         <Label fx:id="lblPerfil"
-               layoutX="20"
-               layoutY="654"
                text="Administrador"
                style="-fx-text-fill:white;"/>
 
-        <!-- SAIR -->
+        <Region prefHeight="10"/>
 
         <Button fx:id="btnSair"
-                layoutX="20"
-                layoutY="675"
-                prefWidth="210"
-                prefHeight="30"
+                prefHeight="35"
+                maxWidth="1.7976931348623157E308"
                 text="🚪 Sair"
                 onAction="#sairSistema"
                 style="-fx-background-color:#FF0048;
                        -fx-text-fill:white;
                        -fx-font-weight:bold;"/>
 
-    </Pane>
+    </VBox>
 
-    <!-- ============================================== -->
-    <!-- ÁREA DE CONTEÚDO -->
-    <!-- ============================================== -->
+    <!-- ================================================= -->
+    <!-- CONTEÚDO -->
+    <!-- ================================================= -->
 
     <AnchorPane fx:id="painelConteudo"
-                layoutX="250"
-                layoutY="0"
-                prefWidth="1030"
-                prefHeight="720"
-                style="-fx-background-color:#F7F7F7;"/>
+                style="-fx-background-color:#F7F7F7;"
+                AnchorPane.leftAnchor="250.0"
+                AnchorPane.rightAnchor="0.0"
+                AnchorPane.topAnchor="0.0"
+                AnchorPane.bottomAnchor="0.0"/>
 
 </AnchorPane>
