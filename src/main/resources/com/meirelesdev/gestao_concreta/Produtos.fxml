@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane prefHeight="720.0"
+            prefWidth="1030.0"
+            xmlns="http://javafx.com/javafx/26"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.meirelesdev.gestao_concreta.controller.ProdutoController">
+
+    <!-- TÍTULO -->
+
+    <Label layoutX="25"
+           layoutY="20"
+           text="Gerenciar Produtos"
+           style="-fx-font-size:28px;-fx-font-weight:bold;"/>
+
+    <!-- FORMULÁRIO -->
+
+    <Pane layoutX="20"
+          layoutY="65"
+          prefWidth="990"
+          prefHeight="220"
+          style="-fx-background-color:white;
+                 -fx-background-radius:10;
+                 -fx-border-radius:10;
+                 -fx-border-color:#DDDDDD;">
+
+        <!-- Nome -->
+
+        <Label layoutX="25" layoutY="20" text="Nome do Produto"/>
+
+        <TextField fx:id="txtNome"
+                   layoutX="25"
+                   layoutY="45"
+                   prefWidth="470"/>
+
+        <!-- Compra -->
+
+        <Label layoutX="520" layoutY="20" text="Preço Compra"/>
+
+        <TextField fx:id="txtPrecoCompra"
+                   layoutX="520"
+                   layoutY="45"
+                   prefWidth="150"/>
+
+        <!-- Venda -->
+
+        <Label layoutX="700" layoutY="20" text="Preço Venda"/>
+
+        <TextField fx:id="txtPrecoVenda"
+                   layoutX="700"
+                   layoutY="45"
+                   prefWidth="150"/>
+
+        <!-- Quantidade -->
+
+        <Label layoutX="25" layoutY="105" text="Quantidade Inicial"/>
+
+        <TextField fx:id="txtQuantidadeInicial"
+                   layoutX="25"
+                   layoutY="130"
+                   prefWidth="200"/>
+
+        <!-- Estoque -->
+
+        <Label layoutX="260" layoutY="105" text="Estoque Mínimo"/>
+
+        <TextField fx:id="txtEstoqueMinimo"
+                   layoutX="260"
+                   layoutY="130"
+                   prefWidth="200"/>
+
+        <!-- Botões -->
+
+        <Button fx:id="btnSalvar"
+                layoutX="520"
+                layoutY="170"
+                prefWidth="120"
+                prefHeight="38"
+                text="Salvar"
+                style="-fx-background-color:#19B5A5;
+                       -fx-text-fill:white;
+                       -fx-font-weight:bold;"/>
+
+        <Button fx:id="btnLimpar"
+                layoutX="660"
+                layoutY="170"
+                prefWidth="120"
+                prefHeight="38"
+                text="Limpar"/>
+
+    </Pane>
+
+    <!-- PESQUISA -->
+
+    <Label layoutX="20"
+           layoutY="310"
+           text="Pesquisar Produto"
+           style="-fx-font-size:15px;-fx-font-weight:bold;"/>
+
+    <TextField fx:id="txtPesquisar"
+               layoutX="20"
+               layoutY="338"
+               prefWidth="420"
+               prefHeight="35"
+               promptText="Digite o nome ou código do produto"/>
+
+    <Button fx:id="btnPesquisar"
+            layoutX="455"
+            layoutY="338"
+            prefWidth="130"
+            prefHeight="35"
+            text="Pesquisar"
+            style="-fx-background-color:#19B5A5;
+                   -fx-text-fill:white;
+                   -fx-font-weight:bold;"/>
+
+    <!-- Cards -->
+
+    <Pane layoutX="620"
+          layoutY="320"
+          prefWidth="120"
+          prefHeight="70"
+          style="-fx-background-color:#19B5A5;
+                 -fx-background-radius:10;">
+
+        <Label layoutX="25"
+               layoutY="12"
+               text="Produtos"
+               style="-fx-text-fill:white;"/>
+
+        <Label fx:id="lblProdutos"
+               layoutX="50"
+               layoutY="35"
+               text="0"
+               style="-fx-font-size:22px;
+                      -fx-font-weight:bold;
+                      -fx-text-fill:white;"/>
+
+    </Pane>
+
+    <Pane layoutX="760"
+          layoutY="320"
+          prefWidth="120"
+          prefHeight="70"
+          style="-fx-background-color:#FF6933;
+                 -fx-background-radius:10;">
+
+        <Label layoutX="35"
+               layoutY="12"
+               text="Alerta"
+               style="-fx-text-fill:white;"/>
+
+        <Label fx:id="lblAlerta"
+               layoutX="50"
+               layoutY="35"
+               text="0"
+               style="-fx-font-size:22px;
+                      -fx-font-weight:bold;
+                      -fx-text-fill:white;"/>
+
+    </Pane>
+
+    <Pane layoutX="900"
+          layoutY="320"
+          prefWidth="90"
+          prefHeight="70"
+          style="-fx-background-color:#FF0048;
+                 -fx-background-radius:10;">
+
+        <Label layoutX="10"
+               layoutY="12"
+               text="Esgot."
+               style="-fx-text-fill:white;"/>
+
+        <Label fx:id="lblEsgotados"
+               layoutX="35"
+               layoutY="35"
+               text="0"
+               style="-fx-font-size:22px;
+                      -fx-font-weight:bold;
+                      -fx-text-fill:white;"/>
+
+    </Pane>
+
+    <!-- TABELA -->
+
+    <TableView fx:id="tableProdutos"
+               layoutX="20"
+               layoutY="410"
+               prefWidth="990"
+               prefHeight="250">
+
+        <columns>
+
+            <TableColumn fx:id="colCodigo" prefWidth="70" text="Código"/>
+
+            <TableColumn fx:id="colNome" prefWidth="300" text="Produto"/>
+
+            <TableColumn fx:id="colCompra" prefWidth="110" text="Compra"/>
+
+            <TableColumn fx:id="colVenda" prefWidth="110" text="Venda"/>
+
+            <TableColumn fx:id="colEstoque" prefWidth="110" text="Estoque"/>
+
+            <TableColumn fx:id="colMinimo" prefWidth="110" text="Mínimo"/>
+
+            <TableColumn fx:id="colStatus" prefWidth="180" text="Status"/>
+
+        </columns>
+
+    </TableView>
+
+    <!-- BOTÕES -->
+
+    <Button fx:id="btnEditar"
+            layoutX="20"
+            layoutY="675"
+            prefWidth="170"
+            prefHeight="38"
+            text="Editar Produto"
+            style="-fx-background-color:#EDE89D;
+                   -fx-font-weight:bold;"/>
+
+    <Button fx:id="btnEntradaEstoque"
+            layoutX="210"
+            layoutY="675"
+            prefWidth="190"
+            prefHeight="38"
+            text="Entrada Estoque"
+            style="-fx-background-color:#19B5A5;
+                   -fx-text-fill:white;
+                   -fx-font-weight:bold;"/>
+
+    <Button fx:id="btnRemover"
+            layoutX="420"
+            layoutY="675"
+            prefWidth="180"
+            prefHeight="38"
+            text="Remover Produto"
+            style="-fx-background-color:#FF0048;
+                   -fx-text-fill:white;
+                   -fx-font-weight:bold;"/>
+
+</AnchorPane>
