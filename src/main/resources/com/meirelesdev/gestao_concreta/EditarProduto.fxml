@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane prefHeight="360.0"
+            prefWidth="520.0"
+            xmlns="http://javafx.com/javafx/26"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.meirelesdev.gestao_concreta.controller.EditarProdutoController">
+
+    <!-- Título -->
+
+    <Label layoutX="25"
+           layoutY="20"
+           text="Editar Produto"
+           style="-fx-font-size:24px;
+                  -fx-font-weight:bold;" />
+
+    <!-- Painel -->
+
+    <Pane layoutX="20"
+          layoutY="60"
+          prefWidth="480"
+          prefHeight="270"
+          style="-fx-background-color:white;
+                 -fx-border-color:#DDDDDD;
+                 -fx-background-radius:10;
+                 -fx-border-radius:10;">
+
+        <!-- Nome -->
+
+        <Label layoutX="20"
+               layoutY="20"
+               text="Nome do Produto"/>
+
+        <TextField fx:id="txtNome"
+                   layoutX="20"
+                   layoutY="45"
+                   prefWidth="440"/>
+
+        <!-- Compra -->
+
+        <Label layoutX="20"
+               layoutY="90"
+               text="Preço de Compra"/>
+
+        <TextField fx:id="txtPrecoCompra"
+                   layoutX="20"
+                   layoutY="115"
+                   prefWidth="130"/>
+
+        <!-- Venda -->
+
+        <Label layoutX="175"
+               layoutY="90"
+               text="Preço de Venda"/>
+
+        <TextField fx:id="txtPrecoVenda"
+                   layoutX="175"
+                   layoutY="115"
+                   prefWidth="130"/>
+
+        <!-- Estoque -->
+
+        <Label layoutX="330"
+               layoutY="90"
+               text="Estoque"/>
+
+        <TextField fx:id="txtEstoque"
+                   layoutX="330"
+                   layoutY="115"
+                   prefWidth="130"/>
+
+        <!-- Estoque mínimo -->
+
+        <Label layoutX="20"
+               layoutY="160"
+               text="Estoque Mínimo"/>
+
+        <TextField fx:id="txtEstoqueMinimo"
+                   layoutX="20"
+                   layoutY="185"
+                   prefWidth="130"/>
+
+        <!-- Botões -->
+
+        <Button fx:id="btnCancelar"
+                layoutX="220"
+                layoutY="220"
+                prefWidth="110"
+                prefHeight="35"
+                text="Cancelar"/>
+
+        <Button fx:id="btnSalvar"
+                layoutX="345"
+                layoutY="220"
+                prefWidth="115"
+                prefHeight="35"
+                text="Salvar"
+                style="-fx-background-color:#19B5A5;
+                       -fx-text-fill:white;
+                       -fx-font-weight:bold;"/>
+
+    </Pane>
+
+</AnchorPane>
