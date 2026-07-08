@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.Priority?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/17"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.meirelesdev.gestao_concreta.controller.RelatorioController">
+
+    <!-- ================================================= -->
+    <!-- TÍTULO -->
+    <!-- ================================================= -->
+
+    <Label text="Relatórios do Sistema"
+           style="-fx-font-size:30px;-fx-font-weight:bold;"
+           AnchorPane.topAnchor="20.0"
+           AnchorPane.leftAnchor="25.0"/>
+
+    <Label text="Gere relatórios em PDF para consulta e impressão."
+           style="-fx-font-size:14px;-fx-text-fill:#666666;"
+           AnchorPane.topAnchor="58.0"
+           AnchorPane.leftAnchor="25.0"/>
+
+    <!-- ================================================= -->
+    <!-- LISTA DE RELATÓRIOS -->
+    <!-- ================================================= -->
+
+    <VBox spacing="18"
+          AnchorPane.topAnchor="100.0"
+          AnchorPane.leftAnchor="20.0"
+          AnchorPane.rightAnchor="20.0"
+          AnchorPane.bottomAnchor="20.0">
+
+        <!-- PRODUTOS -->
+
+        <HBox spacing="20"
+              alignment="CENTER_LEFT"
+              style="-fx-background-color:white;
+                     -fx-background-radius:10;
+                     -fx-border-color:#DDDDDD;
+                     -fx-border-radius:10;
+                     -fx-padding:20;">
+
+            <VBox spacing="5">
+
+                <Label text="Relatório de Produtos"
+                       style="-fx-font-size:18px;
+                              -fx-font-weight:bold;"/>
+
+                <Label text="Lista todos os produtos cadastrados com preços e estoque."/>
+
+            </VBox>
+
+            <Region HBox.hgrow="ALWAYS"/>
+
+            <Button fx:id="btnProdutos"
+                    prefWidth="150"
+                    prefHeight="40"
+                    text="Gerar PDF"
+                    style="-fx-background-color:#19B5A5;
+                           -fx-text-fill:white;
+                           -fx-font-weight:bold;"/>
+
+        </HBox>
+
+        <!-- VENDAS -->
+
+        <HBox spacing="20"
+              alignment="CENTER_LEFT"
+              style="-fx-background-color:white;
+                     -fx-background-radius:10;
+                     -fx-border-color:#DDDDDD;
+                     -fx-border-radius:10;
+                     -fx-padding:20;">
+
+            <VBox spacing="5">
+
+                <Label text="Relatório de Vendas"
+                       style="-fx-font-size:18px;
+                              -fx-font-weight:bold;"/>
+
+                <Label text="Histórico completo das vendas realizadas."/>
+
+            </VBox>
+
+            <Region HBox.hgrow="ALWAYS"/>
+
+            <Button fx:id="btnVendas"
+                    prefWidth="150"
+                    prefHeight="40"
+                    text="Gerar PDF"
+                    style="-fx-background-color:#19B5A5;
+                           -fx-text-fill:white;
+                           -fx-font-weight:bold;"/>
+
+        </HBox>
+
+        <!-- FATURAMENTO -->
+
+        <HBox spacing="20"
+              alignment="CENTER_LEFT"
+              style="-fx-background-color:white;
+                     -fx-background-radius:10;
+                     -fx-border-color:#DDDDDD;
+                     -fx-border-radius:10;
+                     -fx-padding:20;">
+
+            <VBox spacing="5">
+
+                <Label text="Relatório de Faturamento"
+                       style="-fx-font-size:18px;
+                              -fx-font-weight:bold;"/>
+
+                <Label text="Resumo financeiro contendo o faturamento do sistema."/>
+
+            </VBox>
+
+            <Region HBox.hgrow="ALWAYS"/>
+
+            <Button fx:id="btnFaturamento"
+                    prefWidth="150"
+                    prefHeight="40"
+                    text="Gerar PDF"
+                    style="-fx-background-color:#19B5A5;
+                           -fx-text-fill:white;
+                           -fx-font-weight:bold;"/>
+
+        </HBox>
+
+        <!-- ESTOQUE -->
+
+        <HBox spacing="20"
+              alignment="CENTER_LEFT"
+              style="-fx-background-color:white;
+                     -fx-background-radius:10;
+                     -fx-border-color:#DDDDDD;
+                     -fx-border-radius:10;
+                     -fx-padding:20;">
+
+            <VBox spacing="5">
+
+                <Label text="Relatório de Estoque Baixo"
+                       style="-fx-font-size:18px;
+                              -fx-font-weight:bold;"/>
+
+                <Label text="Produtos que precisam de reposição no estoque."/>
+
+            </VBox>
+
+            <Region HBox.hgrow="ALWAYS"/>
+
+            <Button fx:id="btnEstoque"
+                    prefWidth="150"
+                    prefHeight="40"
+                    text="Gerar PDF"
+                    style="-fx-background-color:#19B5A5;
+                           -fx-text-fill:white;
+                           -fx-font-weight:bold;"/>
+
+        </HBox>
+
+        <!-- MAIS VENDIDOS -->
+
+        <HBox spacing="20"
+              alignment="CENTER_LEFT"
+              style="-fx-background-color:white;
+                     -fx-background-radius:10;
+                     -fx-border-color:#DDDDDD;
+                     -fx-border-radius:10;
+                     -fx-padding:20;">
+
+            <VBox spacing="5">
+
+                <Label text="Relatório de Produtos Mais Vendidos"
+                       style="-fx-font-size:18px;
+                              -fx-font-weight:bold;"/>
+
+                <Label text="Ranking dos produtos mais vendidos do sistema."/>
+
+            </VBox>
+
+            <Region HBox.hgrow="ALWAYS"/>
+
+            <Button fx:id="btnMaisVendidos"
+                    prefWidth="150"
+                    prefHeight="40"
+                    text="Gerar PDF"
+                    style="-fx-background-color:#19B5A5;
+                           -fx-text-fill:white;
+                           -fx-font-weight:bold;"/>
+
+        </HBox>
+
+    </VBox>
+
+</AnchorPane>
