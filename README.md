@@ -1,4 +1,10 @@
-# 🏗️ Gestão Concreta - Sistema de Gestão para Loja de Materiais de Construção
+<h1 align="center">
+  🏗️ Gestão Concreta
+</h1>
+
+<h2 align="center">
+  Sistema de Gestão para Loja de Materiais de Construção
+</h2>
 
 <p align="center">
   <img src="img/sistema1.png" width="700">
@@ -15,9 +21,12 @@
   </tr>
 </table>
 
-O **Gestão Concreta** é um sistema desktop desenvolvido em **Java com JavaFX** e banco de dados **MySQL**, seguindo o padrão **MVC (Model–View–Controller)**.
+O **Gestão Concreta** é um sistema desenvolvido em **Java com JavaFX** e banco de dados **MySQL**, seguindo o padrão **MVC (Model–View–Controller)**.
 
-O sistema foi desenvolvido para auxiliar no gerenciamento de lojas de materiais de construção, permitindo o controle de produtos, estoque, vendas, usuários e emissão de relatórios em PDF através de uma interface moderna e intuitiva.
+O projeto foi desenvolvido como parte da disciplina de **Desenvolvimento de Sistemas Corporativos**, do curso de **Sistemas de Informação** do **Instituto Federal do Norte de Minas Gerais (IFNMG)**, com o objetivo de aplicar na prática conceitos de arquitetura de software, Programação Orientada a Objetos e integração com banco de dados.
+
+O sistema foi projetado para auxiliar no gerenciamento de lojas de materiais de construção, permitindo o controle de produtos, estoque, vendas, usuários e emissão de relatórios em PDF por meio de uma interface moderna e intuitiva.
+
 
 ## 🧱 Tecnologias Utilizadas
 
