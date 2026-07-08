@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefWidth="1280"
+            prefHeight="720"
+            xmlns="http://javafx.com/javafx/17"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.meirelesdev.gestao_concreta.controller.LoginController">
+
+    <HBox AnchorPane.topAnchor="0.0"
+          AnchorPane.bottomAnchor="0.0"
+          AnchorPane.leftAnchor="0.0"
+          AnchorPane.rightAnchor="0.0">
+
+        <!-- ============================================== -->
+        <!-- PAINEL ESQUERDO -->
+        <!-- ============================================== -->
+
+        <VBox spacing="25"
+              prefWidth="620"
+              HBox.hgrow="ALWAYS"
+              style="-fx-background-color:#5E5473;">
+
+            <padding>
+                <Insets top="120"
+                        right="70"
+                        bottom="70"
+                        left="70"/>
+            </padding>
+
+            <Label text="GESTÃO CONCRETA"
+                   style="-fx-font-size:40px;
+                          -fx-font-weight:bold;
+                          -fx-text-fill:white;"/>
+
+            <Label text="Sistema de Gerenciamento para Loja de Materiais de Construção"
+                   wrapText="true"
+                   style="-fx-font-size:20px;
+                          -fx-text-fill:white;"/>
+
+            <Pane prefHeight="3"
+                  maxWidth="420"
+                  style="-fx-background-color:#19B5A5;"/>
+
+            <Label text="✔ Controle de Produtos&#10;✔ Controle de Estoque&#10;✔ Financeiro&#10;✔ Relatórios"
+                   style="-fx-font-size:18px;
+                          -fx-text-fill:white;"/>
+
+            <Region VBox.vgrow="ALWAYS"/>
+
+        </VBox>
+
+        <!-- ============================================== -->
+        <!-- PAINEL DIREITO -->
+        <!-- ============================================== -->
+
+        <VBox spacing="20"
+              alignment="TOP_CENTER"
+              prefWidth="660"
+              HBox.hgrow="ALWAYS"
+              style="-fx-background-color:white;">
+
+            <padding>
+                <Insets top="110"
+                        right="90"
+                        bottom="60"
+                        left="90"/>
+            </padding>
+
+            <Label text="Bem-vindo"
+                   style="-fx-font-size:34px;
+                          -fx-font-weight:bold;
+                          -fx-text-fill:#5E5473;"/>
+
+            <Label text="Faça login para acessar o sistema"
+                   style="-fx-font-size:16px;"/>
+
+            <Region prefHeight="20"/>
+
+            <Label text="Usuário"
+                   maxWidth="1.7976931348623157E308"
+                   style="-fx-font-size:15px;
+                          -fx-font-weight:bold;"/>
+
+            <TextField fx:id="txtUsuario"
+                       maxWidth="1.7976931348623157E308"
+                       prefHeight="45"
+                       promptText="Digite seu usuário"
+                       style="-fx-background-radius:8;
+                              -fx-border-radius:8;
+                              -fx-border-color:#19B5A5;"/>
+
+            <Label text="Senha"
+                   maxWidth="1.7976931348623157E308"
+                   style="-fx-font-size:15px;
+                          -fx-font-weight:bold;"/>
+
+            <PasswordField fx:id="txtSenha"
+                           maxWidth="1.7976931348623157E308"
+                           prefHeight="45"
+                           promptText="Digite sua senha"
+                           style="-fx-background-radius:8;
+                                  -fx-border-radius:8;
+                                  -fx-border-color:#19B5A5;"/>
+
+            <Region prefHeight="15"/>
+
+            <Button fx:id="btnEntrar"
+                    maxWidth="1.7976931348623157E308"
+                    prefHeight="50"
+                    text="ENTRAR"
+                    style="-fx-background-color:#19B5A5;
+                           -fx-text-fill:white;
+                           -fx-font-size:18px;
+                           -fx-font-weight:bold;
+                           -fx-background-radius:8;"/>
+
+            <Region VBox.vgrow="ALWAYS"/>
+
+            <Label text="Versão 1.0"
+                   style="-fx-text-fill:#999999;
+              -fx-font-size:12px;"/>
+
+        </VBox>
+
+    </HBox>
+
+</AnchorPane>

@@ -72,6 +72,12 @@
                 text="📊 Relatórios"
                 onAction="#abrirRelatorios"/>
 
+        <Button fx:id="btnUsuarios"
+                prefHeight="42"
+                maxWidth="1.7976931348623157E308"
+                text="👤 Usuários"
+                onAction="#abrirUsuarios"/>
+
         <Button fx:id="btnConfiguracoes"
                 prefHeight="42"
                 maxWidth="1.7976931348623157E308"

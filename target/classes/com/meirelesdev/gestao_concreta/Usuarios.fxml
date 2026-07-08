@@ -1,19 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/26"
+<AnchorPane xmlns="http://javafx.com/javafx/17"
             xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="com.meirelesdev.gestao_concreta.controller.ProdutoController">
+            fx:controller="com.meirelesdev.gestao_concreta.controller.UsuarioController">
 
     <!-- ================================================= -->
     <!-- TÍTULO -->
     <!-- ================================================= -->
 
-    <Label text="Gerenciar Produtos"
-           style="-fx-font-size:28px;-fx-font-weight:bold;"
+    <Label text="Gerenciar Usuários"
+           style="-fx-font-size:28px;
+                  -fx-font-weight:bold;"
            AnchorPane.topAnchor="20.0"
            AnchorPane.leftAnchor="25.0"/>
 
@@ -21,7 +31,7 @@
     <!-- FORMULÁRIO -->
     <!-- ================================================= -->
 
-    <VBox spacing="15"
+    <VBox spacing="18"
           style="-fx-background-color:white;
                  -fx-background-radius:10;
                  -fx-border-radius:10;
@@ -38,26 +48,21 @@
 
             <VBox HBox.hgrow="ALWAYS">
 
-                <Label text="Nome do Produto"/>
+                <Label text="Nome"/>
 
                 <TextField fx:id="txtNome"
-                           maxWidth="1.7976931348623157E308"/>
+                           maxWidth="1.7976931348623157E308"
+                           promptText="Nome do usuário"/>
 
             </VBox>
 
-            <VBox prefWidth="170">
+            <VBox HBox.hgrow="ALWAYS">
 
-                <Label text="Preço Compra"/>
+                <Label text="Login"/>
 
-                <TextField fx:id="txtPrecoCompra"/>
-
-            </VBox>
-
-            <VBox prefWidth="170">
-
-                <Label text="Preço Venda"/>
-
-                <TextField fx:id="txtPrecoVenda"/>
+                <TextField fx:id="txtLogin"
+                           maxWidth="1.7976931348623157E308"
+                           promptText="Login"/>
 
             </VBox>
 
@@ -67,23 +72,33 @@
 
         <HBox spacing="20">
 
-            <VBox prefWidth="220">
+            <VBox HBox.hgrow="ALWAYS">
 
-                <Label text="Quantidade Inicial"/>
+                <Label text="Senha"/>
 
-                <TextField fx:id="txtQuantidadeInicial"/>
-
-            </VBox>
-
-            <VBox prefWidth="220">
-
-                <Label text="Estoque Mínimo"/>
-
-                <TextField fx:id="txtEstoqueMinimo"/>
+                <PasswordField fx:id="txtSenha"
+                               maxWidth="1.7976931348623157E308"
+                               promptText="Senha"/>
 
             </VBox>
 
-            <Pane HBox.hgrow="ALWAYS"/>
+            <VBox HBox.hgrow="ALWAYS">
+
+                <Label text="Perfil"/>
+
+                <ComboBox fx:id="cbPerfil"
+                          maxWidth="1.7976931348623157E308"
+                          promptText="Selecione"/>
+
+            </VBox>
+
+        </HBox>
+
+        <!-- BOTÕES -->
+
+        <HBox spacing="15">
+
+            <Region HBox.hgrow="ALWAYS"/>
 
             <Button fx:id="btnSalvar"
                     prefWidth="120"
@@ -106,20 +121,20 @@
     <!-- PESQUISA -->
     <!-- ================================================= -->
 
-    <Label text="Pesquisar Produto"
-           style="-fx-font-size:15px;-fx-font-weight:bold;"
-           AnchorPane.topAnchor="315.0"
+    <Label text="Pesquisar Usuário"
+           style="-fx-font-size:15px;
+                  -fx-font-weight:bold;"
+           AnchorPane.topAnchor="300.0"
            AnchorPane.leftAnchor="20.0"/>
 
     <HBox spacing="15"
-          alignment="CENTER_LEFT"
-          AnchorPane.topAnchor="340.0"
+          AnchorPane.topAnchor="330.0"
           AnchorPane.leftAnchor="20.0"
           AnchorPane.rightAnchor="20.0">
 
         <TextField fx:id="txtPesquisar"
-                   promptText="Digite o nome ou código do produto"
-                   HBox.hgrow="ALWAYS"/>
+                   HBox.hgrow="ALWAYS"
+                   promptText="Digite o nome ou login do usuário"/>
 
         <Button fx:id="btnPesquisar"
                 prefWidth="130"
@@ -129,63 +144,69 @@
                        -fx-text-fill:white;
                        -fx-font-weight:bold;"/>
 
-        <Pane HBox.hgrow="ALWAYS"/>
+    </HBox>
 
-        <!-- CARD PRODUTOS -->
+    <!-- ================================================= -->
+    <!-- CARDS -->
+    <!-- ================================================= -->
 
-        <VBox alignment="CENTER"
-              spacing="5"
-              prefWidth="120"
-              prefHeight="70"
+    <HBox spacing="20"
+          AnchorPane.topAnchor="380.0"
+          AnchorPane.leftAnchor="20.0"
+          AnchorPane.rightAnchor="20.0">
+
+        <!-- Total -->
+
+        <VBox spacing="10"
+              prefWidth="180"
               style="-fx-background-color:#19B5A5;
-                     -fx-background-radius:10;">
+                     -fx-background-radius:10;
+                     -fx-padding:15;">
 
-            <Label text="Produtos"
+            <Label text="Usuários"
                    style="-fx-text-fill:white;"/>
 
-            <Label fx:id="lblProdutos"
+            <Label fx:id="lblUsuarios"
                    text="0"
-                   style="-fx-font-size:22px;
+                   style="-fx-font-size:24px;
                           -fx-font-weight:bold;
                           -fx-text-fill:white;"/>
 
         </VBox>
 
-        <!-- CARD ALERTA -->
+        <!-- Administradores -->
 
-        <VBox alignment="CENTER"
-              spacing="5"
-              prefWidth="120"
-              prefHeight="70"
+        <VBox spacing="10"
+              prefWidth="180"
+              style="-fx-background-color:#5E5473;
+                     -fx-background-radius:10;
+                     -fx-padding:15;">
+
+            <Label text="Administradores"
+                   style="-fx-text-fill:white;"/>
+
+            <Label fx:id="lblAdministradores"
+                   text="0"
+                   style="-fx-font-size:24px;
+                          -fx-font-weight:bold;
+                          -fx-text-fill:white;"/>
+
+        </VBox>
+
+        <!-- Funcionários -->
+
+        <VBox spacing="10"
+              prefWidth="180"
               style="-fx-background-color:#FF6933;
-                     -fx-background-radius:10;">
+                     -fx-background-radius:10;
+                     -fx-padding:15;">
 
-            <Label text="Alerta"
+            <Label text="Funcionários"
                    style="-fx-text-fill:white;"/>
 
-            <Label fx:id="lblAlerta"
+            <Label fx:id="lblFuncionarios"
                    text="0"
-                   style="-fx-font-size:22px;
-                          -fx-font-weight:bold;
-                          -fx-text-fill:white;"/>
-
-        </VBox>
-
-        <!-- CARD ESGOTADOS -->
-
-        <VBox alignment="CENTER"
-              spacing="5"
-              prefWidth="120"
-              prefHeight="70"
-              style="-fx-background-color:#FF0048;
-                     -fx-background-radius:10;">
-
-            <Label text="Esgot."
-                   style="-fx-text-fill:white;"/>
-
-            <Label fx:id="lblEsgotados"
-                   text="0"
-                   style="-fx-font-size:22px;
+                   style="-fx-font-size:24px;
                           -fx-font-weight:bold;
                           -fx-text-fill:white;"/>
 
@@ -197,8 +218,8 @@
     <!-- TABELA -->
     <!-- ================================================= -->
 
-    <TableView fx:id="tableProdutos"
-               AnchorPane.topAnchor="410.0"
+    <TableView fx:id="tableUsuarios"
+               AnchorPane.topAnchor="470.0"
                AnchorPane.leftAnchor="20.0"
                AnchorPane.rightAnchor="20.0"
                AnchorPane.bottomAnchor="70.0">
@@ -211,31 +232,17 @@
 
             <TableColumn fx:id="colCodigo"
                          text="Código"
-                         prefWidth="80"/>
+                         maxWidth="90"/>
 
             <TableColumn fx:id="colNome"
-                         text="Produto"
-                         prefWidth="300"/>
+                         text="Nome"/>
 
-            <TableColumn fx:id="colCompra"
-                         text="Compra"
-                         prefWidth="120"/>
+            <TableColumn fx:id="colLogin"
+                         text="Login"/>
 
-            <TableColumn fx:id="colVenda"
-                         text="Venda"
-                         prefWidth="120"/>
-
-            <TableColumn fx:id="colEstoque"
-                         text="Estoque"
-                         prefWidth="100"/>
-
-            <TableColumn fx:id="colMinimo"
-                         text="Mínimo"
-                         prefWidth="100"/>
-
-            <TableColumn fx:id="colStatus"
-                         text="Status"
-                         prefWidth="180"/>
+            <TableColumn fx:id="colPerfil"
+                         text="Perfil"
+                         maxWidth="170"/>
 
         </columns>
 
@@ -246,37 +253,23 @@
     <!-- ================================================= -->
 
     <HBox spacing="15"
-          alignment="CENTER_LEFT"
           AnchorPane.leftAnchor="20.0"
-          AnchorPane.rightAnchor="20.0"
           AnchorPane.bottomAnchor="20.0">
 
         <Button fx:id="btnEditar"
                 prefWidth="170"
                 prefHeight="38"
-                text="Editar Produto"
+                text="Editar Usuário"
                 style="-fx-background-color:#EDE89D;
-                       -fx-font-weight:bold;"/>
-
-        <Button fx:id="btnEntradaEstoque"
-                prefWidth="190"
-                prefHeight="38"
-                text="Entrada Estoque"
-                style="-fx-background-color:#19B5A5;
-                       -fx-text-fill:white;
                        -fx-font-weight:bold;"/>
 
         <Button fx:id="btnRemover"
                 prefWidth="180"
                 prefHeight="38"
-                text="Remover Produto"
+                text="Remover Usuário"
                 style="-fx-background-color:#FF0048;
                        -fx-text-fill:white;
                        -fx-font-weight:bold;"/>
-
-        <!-- Espaço para empurrar os botões para a esquerda -->
-
-        <Pane HBox.hgrow="ALWAYS"/>
 
     </HBox>
 
