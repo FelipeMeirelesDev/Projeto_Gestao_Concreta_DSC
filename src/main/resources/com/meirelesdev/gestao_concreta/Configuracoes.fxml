@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/17"
+            xmlns:fx="http://javafx.com/fxml/1">
+
+    <!-- ================================================= -->
+    <!-- TÍTULO -->
+    <!-- ================================================= -->
+
+    <Label text="Configurações do Sistema"
+           style="-fx-font-size:30px;
+                  -fx-font-weight:bold;"
+           AnchorPane.topAnchor="20.0"
+           AnchorPane.leftAnchor="25.0"/>
+
+    <!-- ================================================= -->
+    <!-- ALTERAR SENHA -->
+    <!-- ================================================= -->
+
+    <VBox spacing="20"
+          style="-fx-background-color:white;
+                 -fx-border-color:#DDDDDD;
+                 -fx-background-radius:10;
+                 -fx-border-radius:10;
+                 -fx-padding:20;"
+
+          AnchorPane.topAnchor="75.0"
+          AnchorPane.leftAnchor="20.0"
+          AnchorPane.rightAnchor="20.0">
+
+        <Label text="Alterar Senha"
+               style="-fx-font-size:18px;
+                      -fx-font-weight:bold;"/>
+
+        <HBox spacing="20">
+
+            <VBox HBox.hgrow="ALWAYS">
+
+                <Label text="Senha Atual"/>
+
+                <PasswordField fx:id="txtSenhaAtual"
+                               maxWidth="1.7976931348623157E308"/>
+
+            </VBox>
+
+            <VBox HBox.hgrow="ALWAYS">
+
+                <Label text="Nova Senha"/>
+
+                <PasswordField fx:id="txtNovaSenha"
+                               maxWidth="1.7976931348623157E308"/>
+
+            </VBox>
+
+            <VBox HBox.hgrow="ALWAYS">
+
+                <Label text="Confirmar Senha"/>
+
+                <PasswordField fx:id="txtConfirmarSenha"
+                               maxWidth="1.7976931348623157E308"/>
+
+            </VBox>
+
+        </HBox>
+
+        <HBox>
+
+            <Pane HBox.hgrow="ALWAYS"/>
+
+            <Button fx:id="btnAlterarSenha"
+                    prefWidth="170"
+                    prefHeight="40"
+                    text="Alterar Senha"
+                    style="-fx-background-color:#19B5A5;
+                           -fx-text-fill:white;
+                           -fx-font-weight:bold;"/>
+
+        </HBox>
+
+    </VBox>
+
+    <!-- ================================================= -->
+    <!-- INFORMAÇÕES DO SISTEMA -->
+    <!-- ================================================= -->
+
+    <VBox spacing="20"
+          style="-fx-background-color:white;
+                 -fx-border-color:#DDDDDD;
+                 -fx-background-radius:10;
+                 -fx-border-radius:10;
+                 -fx-padding:20;"
+
+          AnchorPane.topAnchor="320.0"
+          AnchorPane.leftAnchor="20.0"
+          AnchorPane.rightAnchor="20.0"
+          AnchorPane.bottomAnchor="20.0">
+
+        <Label text="Informações do Sistema"
+               style="-fx-font-size:18px;
+                      -fx-font-weight:bold;"/>
+
+        <GridPane hgap="25"
+                  vgap="18">
+
+            <columnConstraints>
+                <ColumnConstraints prefWidth="170"/>
+                <ColumnConstraints hgrow="ALWAYS"/>
+            </columnConstraints>
+
+            <Label text="Sistema"
+                   GridPane.rowIndex="0"
+                   GridPane.columnIndex="0"/>
+
+            <Label fx:id="lblSistema"
+                   text="Gestão Concreta"
+                   GridPane.rowIndex="0"
+                   GridPane.columnIndex="1"/>
+
+            <Label text="Versão"
+                   GridPane.rowIndex="1"
+                   GridPane.columnIndex="0"/>
+
+            <Label fx:id="lblVersao"
+                   text="1.0"
+                   GridPane.rowIndex="1"
+                   GridPane.columnIndex="1"/>
+
+            <Label text="Banco de Dados"
+                   GridPane.rowIndex="2"
+                   GridPane.columnIndex="0"/>
+
+            <Label fx:id="lblBanco"
+                   text="🟢 Conectado"
+                   style="-fx-font-weight:bold;
+                          -fx-text-fill:#19B5A5;"
+                   GridPane.rowIndex="2"
+                   GridPane.columnIndex="1"/>
+
+            <Label text="Tecnologia"
+                   GridPane.rowIndex="3"
+                   GridPane.columnIndex="0"/>
+
+            <Label text="JavaFX + MySQL"
+                   GridPane.rowIndex="3"
+                   GridPane.columnIndex="1"/>
+
+            <Label text="Desenvolvedor"
+                   GridPane.rowIndex="4"
+                   GridPane.columnIndex="0"/>
+
+            <Label fx:id="lblDesenvolvedor"
+                   text="Felipe Gonçalves Meireles"
+                   GridPane.rowIndex="4"
+                   GridPane.columnIndex="1"/>
+
+        </GridPane>
+
+        <Pane VBox.vgrow="ALWAYS"/>
+
+        <HBox>
+
+            <Pane HBox.hgrow="ALWAYS"/>
+
+            <Button fx:id="btnTestarConexao"
+                    prefWidth="190"
+                    prefHeight="40"
+                    text="Testar Conexão"
+                    style="-fx-background-color:#19B5A5;
+                           -fx-text-fill:white;
+                           -fx-font-weight:bold;"/>
+
+        </HBox>
+
+    </VBox>
+
+</AnchorPane>
